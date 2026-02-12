@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CryptoVision Dashboard</title>
+
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo-container">
+        <img src="/assets/logo.png" alt="CryptoVision Logo" class="logo" />
+        <h1>CryptoVision</h1>
+      </div>
+      <div class="search-container">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Search coin (e.g. bitcoin)"
+        />
+        <button id="searchBtn">Search</button>
+      </div>
+    </header>
+
+    <main class="container">
+      <!-- Error / Info Messages -->
+      <div id="message" class="message hidden"></div>
+
+      <!-- Summary Card -->
+      <section class="card summary-card">
+        <div id="summaryLoading" class="spinner"></div>
+        <div id="summaryContent" class="hidden">
+          <h2 id="coinTitle"></h2>
+          <p class="price" id="coinPrice"></p>
+          <div class="stats-grid">
+            <div><span>Market Cap</span><strong id="marketCap"></strong></div>
+            <div><span>24h Volume</span><strong id="volume"></strong></div>
+            <div><span>24h Change</span><strong id="change"></strong></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Chart Section -->
+      <section class="card">
+        <h3>7‑Day Price Trend</h3>
+        <canvas id="priceChart"></canvas>
+      </section>
+
+      <!-- Top Coins Table -->
+      <section class="card">
+        <h3>Top Cryptocurrencies</h3>
+        <div class="table-container">
+          <table id="coinsTable">
+            <thead>
+              <tr>
+                <th>Coin</th>
+                <th>Price</th>
+                <th>1h %</th>
+                <th>24h %</th>
+                <th>7d %</th>
+                <th>Market Cap</th>
+                <th>24h Volume</th>
+                <th>Circulating Supply</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>
+        Data from
+        <a href="https://www.coingecko.com/en/api" target="_blank"
+          >CoinGecko API</a
+        >
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
