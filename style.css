@@ -160,3 +160,26 @@ tbody tr:hover {
   background: #fee2e2;
   color: var(--danger);
 }
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+.pagination button {
+  margin: 0 4px;
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  background: #fff;
+  cursor: pointer;
+}
+
+.pagination button.active {
+  background: #2563eb;
+  color: #fff;
+  font-weight: bold;
+}
+
+.pagination .ellipsis {
+  margin: 0 6px;
+  color: #666;
+}

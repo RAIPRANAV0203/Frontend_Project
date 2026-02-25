@@ -11,14 +11,24 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
 
     <!-- Chart.js CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/chart.umd.min.js"></script>
   </head>
   <body>
     <header class="header">
       <div class="logo-container">
-        <img src="/assets/logo.png" alt="CryptoVision Logo" class="logo" />
+        <img
+          src="assests\logo.png"
+          alt="CryptoVision logo - cryptocurrency dashboard application branding"
+          class="logo"
+        />
         <h1>CryptoVision</h1>
       </div>
       <div class="search-container">
@@ -32,7 +42,6 @@
     </header>
 
     <main class="container">
-      <!-- Error / Info Messages -->
       <div id="message" class="message hidden"></div>
 
       <!-- Summary Card -->
@@ -74,6 +83,31 @@
             </thead>
             <tbody></tbody>
           </table>
+          <nav aria-label="Page navigation">
+            <ul class="pagination">
+              <li class="page-item">
+                <a class="page-link" href="/coins?page=1" aria-label="Previous">
+                  <span aria-hidden="true">«</span>
+                </a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="/coins?page=1">1</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="/coins?page=2">2</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="/coins?page=3">3</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="/coins?page=4" aria-label="Next">
+                  <span aria-hidden="true">»</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="pagination" id="pagination"></div>
         </div>
       </section>
     </main>
@@ -86,7 +120,12 @@
         >
       </p>
     </footer>
-
     <script src="script.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
   </body>
 </html>
